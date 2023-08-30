@@ -1,6 +1,8 @@
 package com.aac.webapp.controller;
 
 import com.aac.webapp.dto.Consumer;
+import com.aac.webapp.dto.ConsumerReport;
+import com.aac.webapp.dto.ConsumerReportInt;
 import com.aac.webapp.entity.ConsumerEntity;
 import com.aac.webapp.service.Webservice;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.List;
 
 @RestController
 public class WebController {
@@ -28,6 +31,13 @@ public class WebController {
         consumer= webservice.getConsumerById(id);
         return consumer;
     }
+
+    @RequestMapping("/getConsumerDetails")
+    public List<ConsumerReportInt> getConsumerReport(){
+        List<ConsumerReportInt> consumerReport= webservice.getConsumerDetails();
+        return consumerReport;
+    }
+
 
 
 }

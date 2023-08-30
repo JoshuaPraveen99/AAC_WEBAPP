@@ -1,11 +1,11 @@
 package com.aac.webapp.entity;
 
-import com.aac.webapp.dto.Consumer;
 import jakarta.persistence.*;
 
 @Entity
 @Table(name="consumerdetails")
-public class ConsumerDetails {
+public class ConsumerDetailsEntity {
+    @Id
     @Column(name = "id")
     private int id;
     @OneToOne

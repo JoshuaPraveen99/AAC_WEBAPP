@@ -1,9 +1,13 @@
 package com.aac.webapp.dto;
 
+import org.springframework.stereotype.Component;
+
+
 public class ConsumerReport {
     private String name;
     private String profession;
     private String project;
+    private int salary;
 
     public String getName() {
         return name;
@@ -28,14 +32,18 @@ public class ConsumerReport {
     public void setProject(String project) {
         this.project = project;
     }
-
-    public long getSalary() {
-        return salary;
-    }
-
-    public void setSalary(long salary) {
+    public ConsumerReport(String name, String profession, String project, int salary) {
+        this.name = name;
+        this.profession = profession;
+        this.project = project;
         this.salary = salary;
     }
 
-    private long salary;
+    public int getSalary() {
+        return salary;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
 }
