@@ -23,6 +23,7 @@ public class Webservice {
         System.out.println("Service added");
         System.out.println("Service modified");
         System.out.println("Service2 added");
+        System.out.println("Service3 added");
 
     }
 }
