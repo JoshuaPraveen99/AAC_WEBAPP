@@ -20,21 +20,8 @@ public class Webservice {
     @Autowired
     private Consumer consumer;
     public void sample(){
-        System.out.println("Service class to be added.");
-        int a=10;
-        int b=20;
-        int sum=a+b;
-        System.out.println(sum);
-    }
+        System.out.println("Service added");
+        System.out.println("Service modified");
 
-    public Consumer getConsumerById(int id) throws InvocationTargetException, IllegalAccessException {
-        ConsumerEntity consumerEntity= consumerRepository.findById(id);
-        BeanUtils.copyProperties(consumer,consumerEntity);
-        return consumer;
-    }
-
-    public List<ConsumerReportInt> getConsumerDetails(){
-        List<ConsumerReportInt> consumerReport=consumerRepository.getConsumerdetails();
-        return consumerReport;
     }
 }
