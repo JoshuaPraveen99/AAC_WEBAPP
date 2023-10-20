@@ -35,6 +35,7 @@ public class WebController {
     @RequestMapping("/getConsumerDetails")
     public List<ConsumerReportInt> getConsumerReport(){
         List<ConsumerReportInt> consumerReport= webservice.getConsumerDetails();
+        System.out.println("Controller updated");
         return consumerReport;
     }
 
